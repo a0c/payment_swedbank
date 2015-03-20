@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+
+        <record id="payment_acquirer_swedbank" model="payment.acquirer">
+            <field name="name">Swedbank</field>
+            <field name="provider">swedbank</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="view_template_id" ref="swedbank_acquirer_button"/>
+            <field name="environment">test</field>
+            <field name="pre_msg"><![CDATA[
+<p>You will be redirected to the Swedbank website after clicking on the payment button.</p>]]></field>
+            <field name="VK_SND_ID">uid521505</field>
+            <field name="swedbank_PRIVATE_KEY">test/cert/private/user_key.pem</field>
+            <field name="swedbank_BANK_CERT">test/cert/public/bank_cert.pem</field>
+            <field name="bank_id">HP</field>
+        </record>
+
+    </data>
+</openerp>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="0">
+
+        <record id="acquirer_form" model="ir.ui.view">
+            <field name="name">payment.acquirer.form</field>
+            <field name="model">payment.acquirer</field>
+            <field name="inherit_id" ref="payment_banklink.acquirer_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='banklink']" position="inside">
+                    <field name="swedbank_PRIVATE_KEY" attrs="{'invisible': [('swedbank_PRIVATE_KEY', '=', False)]}"/>
+                    <field name="swedbank_BANK_CERT" attrs="{'invisible': [('swedbank_BANK_CERT', '=', False)]}"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</openerp>
