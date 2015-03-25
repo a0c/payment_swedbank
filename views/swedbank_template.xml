@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
-    <data noupdate="0">
+    <data noupdate="1">
 
         <template id="swedbank_acquirer_button">
-            <form t-if="acquirer.swedbank_BANK_CERT" t-att-action="tx_url" method="post" target="_self">
+            <form t-if="acquirer.swedbank_BANK_CERT and tx_values.get('show_button')" t-att-action="tx_url" method="post" target="_self">
                 <t t-foreach="tx_values" t-as="f">
                     <input t-if="f.startswith('VK_')" type="hidden" t-att-name="f" t-att-value="tx_values[f]"/>
                 </t>
