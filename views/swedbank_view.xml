@@ -7,10 +7,12 @@
             <field name="model">payment.acquirer</field>
             <field name="inherit_id" ref="payment_banklink.acquirer_form"/>
             <field name="arch" type="xml">
-                <xpath expr="//group[@name='banklink']" position="inside">
+                <field name="pass_PRIVATE_KEY" position="before">
                     <field name="swedbank_PRIVATE_KEY" attrs="{'invisible': [('swedbank_PRIVATE_KEY', '=', False)]}"/>
+                </field>
+                <field name="pass_PRIVATE_KEY" position="after">
                     <field name="swedbank_BANK_CERT" attrs="{'invisible': [('swedbank_BANK_CERT', '=', False)]}"/>
-                </xpath>
+                </field>
             </field>
         </record>
 
