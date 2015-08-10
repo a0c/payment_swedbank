@@ -23,4 +23,4 @@ class SwedbankPaymentAcquirer(models.Model):
 
     def swedbank_get_form_action_url(self, cr, uid, id, context=None):
         env = self.read(cr, uid, id, ['environment'], context=context)['environment']
-        return env == 'prod' and 'https://www.swedbank.ee/banklink' or 'https://pangalink.net/banklink/swedbank-common'
+        return env == 'prod' and 'https://www.swedbank.ee/banklink' or 'http://localhost:3480/banklink/swedbank-common'
